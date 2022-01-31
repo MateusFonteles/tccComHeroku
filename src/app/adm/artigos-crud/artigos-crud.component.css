@@ -1,0 +1,15 @@
+button{
+    width: 15%;
+    margin: auto;
+    margin-top: 15px;
+    margin-bottom:15px ;
+}
+
+h1{
+    text-align: center;
+}
+
+.conteudo{
+    width: 90%;
+    margin: auto;
+}

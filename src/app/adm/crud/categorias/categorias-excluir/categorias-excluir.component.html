@@ -1,0 +1,40 @@
+<div *ngIf="categoria !== null">
+
+  <section fxLayout="column" fxFlexAlign="center"  fxFlex="50%" fxFlex.xs="100%" fxFlex.sm="100%" class="conteudo">
+
+
+    <ul class="breadcrumb">
+          <li><a href="/home">Início</a></li>
+          <li><a href="/adm/">Administração</a></li>
+          <li><a href="/adm-categorias/">Categorias</a></li>
+          <li><a routerLink="/adm-excluir-categoria">Excluir {{categoria.nome}}</a></li>
+        </ul>
+
+<mat-card>
+
+    <mat-card-title>Excluir Categoria</mat-card-title>
+
+    <form>
+        <mat-form-field>
+            <input matInput placeholder="Nome da categoria"
+                [value] ="categoria.nome" name="nome" disabled>
+        </mat-form-field>
+
+        <mat-form-field>
+            <input matInput placeholder="Descrição da categoria"
+            [value] ="categoria.descricao" name="descricao" disabled>
+        </mat-form-field>
+
+    </form>
+
+<button mat-raised-button (click) = "excluirCategoria()" color = "primary">
+Excluir
+</button>
+
+<button mat-raised-button (click) = "cancelar()" color = "accent">
+Cancelar
+</button>
+
+</mat-card>
+</section>
+    </div>

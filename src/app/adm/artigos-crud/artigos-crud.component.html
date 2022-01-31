@@ -1,0 +1,24 @@
+<section fxLayout="column" fxFlexAlign="stretch" class="conteudo">
+    <ul class="breadcrumb">
+
+        <li><a href="/home">Início</a></li>
+        <li><a href="/adm">Administração</a></li>
+        <li><a href="/adm-artigos">Artigos</a></li>
+      </ul>
+
+<h1>
+    Listagem dos artigos
+</h1>
+
+        <button mat-raised-button (click) = "navigateToCriarArtigo()" color="primary">
+            Novo Artigo
+        </button>
+
+        <app-artigos-visualizar></app-artigos-visualizar>
+        
+        <button mat-raised-button (click) = "navigateToPainel()" color="accent">
+            Voltar
+        </button>
+        
+
+</section>

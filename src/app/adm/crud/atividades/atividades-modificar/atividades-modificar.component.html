@@ -1,0 +1,67 @@
+<section fxLayout="column" fxFlexAlign="center"  fxFlex="50%" fxFlex.xs="100%" fxFlex.sm="100%" class="conteudo">
+    <ul class="breadcrumb">
+      <li><a href="/home">Início</a></li>
+      <li><a href="/adm">Administração</a></li>
+      <li><a href="/adm-atividades">Atividades</a></li>
+      <li><a routerLink="/adm-modificar-atividade">Modificar {{atividade.titulo}}</a></li>
+
+    </ul>
+  <mat-card>
+
+      <mat-card-title>Modificar atividade</mat-card-title>
+
+      <form>
+          <mat-form-field>
+              <input matInput placeholder="Título da atividade"
+                  [(ngModel)] ="atividade.titulo" name="titulo">
+          </mat-form-field>
+
+
+      <mat-form-field appearance="fill">
+          <mat-label>Matéria</mat-label>
+          <mat-select [(value)]="materiaSelecionada">
+            <mat-option> </mat-option>
+            <mat-option *ngFor="let categoria of categorias" [value]="categoria.nome">
+              {{categoria.nome}}
+            </mat-option>
+          </mat-select>
+        </mat-form-field>
+
+        <mat-form-field appearance="fill">
+          <mat-label>Série</mat-label>
+          <mat-select [(value)]="serieSelecionada">
+            <mat-option> </mat-option>
+            <mat-option *ngFor="let serie of series" [value]="serie.nome">
+              {{serie.nome}}
+            </mat-option>
+          </mat-select>
+        </mat-form-field>
+
+
+          <mat-form-field>
+              <input matInput placeholder="Descrição da atividade"
+              [(ngModel)] ="atividade.texto" name="texto">
+          </mat-form-field>
+
+          <mat-form-field>
+              <input matInput placeholder="Autor da atividade"
+              [(ngModel)] ="atividade.autor" name="autor">
+          </mat-form-field>
+
+          <!-- <mat-form-field>
+              <input matInput placeholder="Data de publicação da atividade"
+              [value] ="atividade.data" name="data" disabled>
+          </mat-form-field> -->
+      </form>
+
+
+  <button mat-raised-button (click) = "modificarAtividade()" color = "primary">
+  Salvar alterações
+  </button>
+
+  <button mat-raised-button (click) = "cancelar()" color = "accent">
+  Cancelar
+  </button>
+
+  </mat-card>
+  </section>

@@ -1,0 +1,64 @@
+<section  fxFlex="50%" fxFlex.xs="90%" fxFlex.sm="90%" class="conteudo">
+
+
+  <ul class="breadcrumb">
+        <li><a href="/home">Início</a></li>
+        <li><a href="/adm">Administração</a></li>
+        <li><a href="/adm-atividades">Atividades</a></li>
+        <li><a href="/adm-criar-atividade">Criar Atividade</a></li>
+      </ul>
+
+
+      <h1>Nova Atividade</h1>
+        <form>
+            <mat-form-field >
+              <input matInput placeholder="Título da atividade"
+              [(ngModel)] ="atividade.titulo" name="titulo" >
+            </mat-form-field>
+
+            <mat-form-field appearance="fill">
+                <mat-label>Matéria</mat-label>
+                <mat-select [(ngModel)]="atividade.categoria" name="categoria">
+                  <mat-option> </mat-option>
+                  <mat-option *ngFor="let categoria of categorias" [value]="categoria.nome">
+                    {{categoria.nome}}
+                  </mat-option>
+                </mat-select>
+              </mat-form-field>
+<!--
+              <mat-form-field appearance="fill">
+                <mat-label>Série</mat-label>
+                <mat-select [(ngModel)]="atividade.serie" name="serie">
+                  <mat-option> </mat-option>
+                  <mat-option *ngFor="let serie of series" [value]="serie.nome">
+                    {{serie.nome}}
+                  </mat-option>
+                </mat-select>
+              </mat-form-field> -->
+
+              <mat-form-field>
+                <textarea matInput placeholder="Descrição da atividade"
+                [(ngModel)] ="atividade.texto" name="texto" ></textarea>
+              </mat-form-field>
+              <img [src]="urlImagem" >
+            <div class="subirImagem">
+            <input type="file" accept=".png, .jpg, .jpeg" (change)="carregarImagem($event)" id="inputFile" class="ninjaInput">
+            <label for="inputFile">
+            <p><mat-icon>file_upload</mat-icon></p>
+            </label>
+            <p>Clique para selecionar a imagem.</p>
+            </div>
+
+          </form>
+
+
+
+          <button mat-raised-button (click) = "criarAtividade()" color = "primary">
+            Salvar
+  </button>
+
+  <button mat-raised-button (click) = "cancelar()" color = "accent">
+    Cancelar
+  </button>
+
+          </section>

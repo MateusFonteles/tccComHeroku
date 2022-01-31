@@ -1,0 +1,46 @@
+.topo {
+    display: block;
+    }
+    
+      img{
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        width: 30%;
+        margin-bottom: 25px;
+        }
+    
+      h1{
+        text-align: center;
+      }
+    
+    .cards {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+      grid-gap: 30px;
+      
+    }
+     .mat-card{
+      margin: auto;
+      height: 300px;
+      width: 500px;
+      margin-bottom: 15px;
+        }    
+    
+    
+    .cards a{
+      text-decoration: none;
+    }
+    
+    .conteudo{
+      width: 90%;
+      align-items: center;
+      margin: auto;
+    }
+    
+    a{
+      text-decoration: none;
+    }
+    
+    
+    

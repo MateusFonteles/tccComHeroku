@@ -1,0 +1,83 @@
+<!--
+<section fxFlex="50%" fxFlex.xs="100%" fxFlex.sm="100%" class="conteudo">
+
+
+    <ul class="breadcrumb">
+          <li><a href="/home">Início</a></li>
+          <li><a href="/usuario-login">Login</a></li>
+
+        </ul>
+
+
+          <form>
+                   <mat-form-field placeholder="E-mail do usuário">
+                <mat-label>E-mail</mat-label>
+                <input>
+              </mat-form-field>
+
+              <mat-form-field placeholder="Senha do usuário">
+                  <mat-label>Senha</mat-label>
+                  <input>
+                </mat-form-field>
+
+                <button mat-raised-button (click)="logar()" color = "primary">Entrar</button>
+      <div class="cadastro-forgot">
+        <a mat-raised-button  color="primary" routerLink="/usuario-cadastro" >Não tenho cadastro</a>
+        <a mat-raised-button color="accent" routerLink="/usuario-recuperar-senha">Esqueci a senha</a>
+      </div>
+
+          </form>
+
+  </section>
+
+-->
+
+
+<section fxFlex="50%" fxFlex.xs="90%" fxFlex.sm="90%" class="conteudo">
+
+  <ul class="breadcrumb">
+        <li><a href="/home">Início</a></li>
+        <li><a href="/usuario-login">Login</a></li>
+
+      </ul>
+
+
+      <h1>Login</h1>
+
+      <form>
+
+        <mat-form-field>
+          <input
+          [formControl] = "email"
+          required
+          [(ngModel)] = "creds.email"
+          name="email"
+          type="email"
+          matInput
+          placeholder="E-mail">
+        </mat-form-field>
+
+
+        <mat-form-field>
+          <input
+            [formControl] = "senha"
+            required
+            [(ngModel)] = "creds.senha"
+            name="senha"
+            type="password"
+            matInput
+            placeholder="Senha">
+          </mat-form-field>
+
+
+      <div class="cadastro-login">
+        <button [disabled]="!validaCampos()" mat-raised-button (click)="logar()" color="primary">Entrar</button>
+      </div>
+      <div class="cadastro-recuperar">
+        <p> <a class="button-forgot-password" routerLink="/usuario-cadastro">Cadastre-se</a></p>
+        <p> <a  class="button-forgot-password" routerLink="/usuario-recuperar-senha">Esqueci a senha</a></p>
+      </div>
+    </form>
+
+
+</section>

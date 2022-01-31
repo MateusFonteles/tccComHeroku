@@ -1,0 +1,59 @@
+
+<section fxFlex="50%" fxFlex.xs="90%" fxFlex.sm="90%" class="conteudo">
+
+    <ul class="breadcrumb">
+          <li><a href="/home">Início</a></li>
+          <li><a href="/usuario-cadastro">Cadastro</a></li>
+
+        </ul>
+
+
+        <h1>Cadastro</h1>
+
+        <form>
+
+          <mat-form-field>
+            <input
+            [formControl] = "nome"
+            required
+            matInput
+            placeholder="Nome do usuário"
+            [(ngModel)] ="usuario.nome"
+             name="nome" >
+        </mat-form-field>
+
+          <mat-form-field>
+            <input  [formControl] = "email"
+            required
+            [(ngModel)] = "usuario.email"
+            name="email"
+            type="email"
+            matInput
+            placeholder="E-mail">
+        </mat-form-field>
+
+          <mat-form-field>
+            <input
+            [formControl] = "senha"
+            required
+            type="password"
+            matInput placeholder="Senha do usuário"
+            [(ngModel)] ="usuario.senha"
+            name="senha" >
+        </mat-form-field>
+
+
+        <!-- <mat-form-field>
+            <input matInput placeholder="Data de cadastro do usuário"
+            [(ngModel)] ="usuario.data" name="data" disabled>
+        </mat-form-field> -->
+
+
+          <button [disabled]="!validaCampos()" (click)="criarUsuario()"  mat-flat-button color="primary">Cadastrar</button>
+          <div class="cadastro-login">
+            <p>Já tem uma conta? <a class="button-forgot-password" mat-button routerLink="/usuario-login">Fazer login</a></p>
+          </div>
+      </form>
+
+
+  </section>

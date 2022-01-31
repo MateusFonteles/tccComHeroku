@@ -1,0 +1,42 @@
+<section fxLayout="column" fxFlexAlign="center"  fxFlex="50%" fxFlex.xs="100%" fxFlex.sm="100%" class="conteudo">
+
+
+    <ul class="breadcrumb">
+          <li><a href="/home">Início</a></li>
+          <li><a href="/adm">Administração</a></li>
+          <li><a href="/adm-usuarios">Usuarios</a></li>
+          <li><a routerLink="/adm-excluir-usuario">Excluir {{usuario.nome}}</a></li>
+        </ul>
+
+<mat-card>
+
+    <mat-card-title>Excluir usuario</mat-card-title>
+
+    <form>
+        <mat-form-field>
+            <input matInput placeholder="Nome do usuario"
+                [value] ="usuario.nome" name="nome" disabled>
+        </mat-form-field>
+
+        <mat-form-field>
+            <input matInput placeholder="Email do usuario"
+            [value] ="usuario.email" name="email" disabled>
+        </mat-form-field>
+<!--
+        <mat-form-field>
+            <input matInput placeholder="Data de cadastro"
+            [value] ="usuario.data" name="data" disabled>
+        </mat-form-field>
+         -->
+    </form>
+
+<button mat-raised-button (click) = "excluirUsuario()" color = "primary">
+Excluir
+</button>
+
+<button mat-raised-button (click) = "cancelar()" color = "accent">
+Cancelar
+</button>
+
+</mat-card>
+</section>

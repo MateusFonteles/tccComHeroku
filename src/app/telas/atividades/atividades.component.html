@@ -1,0 +1,66 @@
+
+  <section *ngIf="materiaSelecionada == ''" class="conteudo">
+
+    <ul class="breadcrumb">
+      <li><a href="#">Início</a></li>
+      <li><a href="/atividades">Atividades</a></li>
+    </ul>
+    <div class="titulo">
+      <h1>
+        Listagem de Categorias
+      </h1>
+      <p>
+      Clique na matéria desejada
+    </p>
+  </div>
+  <div>
+      <div fxLayout="row wrap" fxLayoutGap="16px grid">
+        <div fxFlex="25%" fxFlex.xs="100" fxFlex.sm="50%" *ngFor= "let categoria of categorias">
+          <mat-card  class="mat-elevation-z4">
+            <button mat-button (click)="selecionarMateria(categoria.nome)"><h1>{{categoria.nome}}</h1>
+            </button>
+          </mat-card>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+    <section *ngIf="materiaSelecionada != ''" class="conteudo">
+      <ul class="breadcrumb">
+        <li><a href="#">Início</a></li>
+        <li><a href="/atividades">Atividades</a></li>
+        <li><a routerLink="/atividades">{{materiaSelecionada}}</a></li>
+      </ul>
+      <h1> Atividades de {{materiaSelecionada}}</h1>
+    </section>
+    <div class="conteudo">
+
+        <div *ngFor="let atividade of atividades">
+          <div *ngIf="atividade.categoria == materiaSelecionada">
+            <a routerLink="/atividade/{{atividade.codigo}}">
+            <mat-card  class="atividades-cards" fxLayout="flex">
+                <img mat-card-image src="assets\atvExemplo.png">
+                <div>
+
+                  <mat-card-header>
+                  <mat-card-title>
+                    <h1>{{atividade.titulo}}</h1>
+                  </mat-card-title>
+                </mat-card-header>
+                <mat-card-content>
+                  <p>Materia: {{atividade.categoria}}</p>
+                  <!-- <p>Série: {{atividade.serie}}</p> -->
+                </mat-card-content>
+                <mat-card-actions>
+                  <button mat-button>Download</button>
+                </mat-card-actions>
+              </div>
+              </mat-card>
+            </a>
+      </div>
+    </div>
+    <section *ngIf="materiaSelecionada != ''">
+
+          <button mat-button (click)="reiniciarMateriaSelecionada()">Voltar à Seleção de Matérias</button>
+    </section>

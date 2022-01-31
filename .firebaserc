@@ -1,0 +1,14 @@
+{
+  "targets": {
+    "spacoeducar": {
+      "hosting": {
+        "frontend": [
+          "spacoeducar"
+        ]
+      }
+    }
+  },
+  "projects": {
+    "default": "spacoeducar"
+  }
+}

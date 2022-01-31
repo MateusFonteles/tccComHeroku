@@ -1,0 +1,53 @@
+form {
+  display: flex;
+  flex-direction: column;
+}
+
+
+h1{
+  text-align: center;
+}
+
+
+button {
+width: 40%;
+margin: 10px;}
+
+.conteudo{
+  margin: auto;
+}
+
+.mat-form-field{
+  margin-top:10px
+}
+textarea.mat-input-element {
+  height:150px;
+  margin-bottom:15px}
+
+.subirImagem input[type="file"]{
+      display: none;
+    }
+
+    .mat-icon {
+      font-size: 30pt;
+      text-align: center;
+    }
+
+
+    .mat-icon:active{
+      transform: scale(0.9 );
+    }
+
+    .subirImagem p{
+      text-align: center;
+    }
+
+    .subirImagem{
+      justify-content: center;
+      align-items: center;
+      align-content: center;
+      margin: auto;
+      margin-top: 20px;
+      height: fit-content;
+      width: 30%;
+    }

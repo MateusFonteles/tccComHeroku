@@ -1,0 +1,23 @@
+
+.imgCard{
+    width:140px;
+    height: 210px;
+    margin: 5px;
+}
+table {
+    width: 100%;
+}
+
+.edit{
+    margin-right: 15px;
+}
+
+.edit >i{
+    color: #d9cd26;
+    
+}
+
+.delete >i{
+    color: #e35e6b;
+}
+

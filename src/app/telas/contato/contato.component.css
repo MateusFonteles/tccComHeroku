@@ -1,0 +1,26 @@
+img{
+    max-width: 30%;
+    align-self: center;
+    margin:30px
+}
+
+h1{
+    text-align:center;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+button{
+    width: 15%;
+    margin: auto;
+    margin-top: 15px;
+    margin-bottom:15px ;
+}
+section {
+    margin: auto;
+}
+
+textarea.mat-input-element {height:200px}

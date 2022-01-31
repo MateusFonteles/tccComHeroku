@@ -1,0 +1,46 @@
+<div *ngIf="categoria !==null">
+
+  <section fxLayout="column" fxFlexAlign="center"  fxFlex="50%" fxFlex.xs="100%" fxFlex.sm="100%" class="conteudo">
+
+    <ul class="breadcrumb">
+      <li><a href="/home">Início</a></li>
+      <li><a href="/adm">Administração</a></li>
+        <li><a href="/adm-categorias">Categorias</a></li>
+        <li><a routerLink="/adm-modificar-categoria">Modificar {{categoria.nome}}</a></li>
+      </ul>
+
+<mat-card>
+
+  <mat-card-title>Modificar Categoria {{categoria.codigo}}</mat-card-title>
+
+  <form>
+    <mat-form-field>
+          <input matInput placeholder="Nome da categoria"
+          [(ngModel)] ="categoria.nome" name="nome" >
+      </mat-form-field>
+
+      <mat-form-field>
+          <input matInput placeholder="Descrição da categoria"
+          [(ngModel)] ="categoria.descricao" name="descricao" >
+        </mat-form-field>
+
+      <mat-form-field>
+          <input matInput placeholder="Código da categoria"
+          [(ngModel)] ="categoria.codigo" name="codigo" >
+        </mat-form-field>
+
+      </form>
+
+<button mat-raised-button (click) = "modificarCategoria()" color = "primary">
+  Modificar
+</button>
+
+<button mat-raised-button (click) = "cancelar()" color = "accent">
+Cancelar
+</button>
+
+</mat-card>
+
+</section>
+
+</div>

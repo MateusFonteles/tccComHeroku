@@ -1,0 +1,56 @@
+<div fxFlex="50%" fxFlex.xs="100%" fxFlex.sm="50%" class="conteudo">
+    <ul class="breadcrumb">
+        <li><a href="/home">Início</a></li>
+        <li><a href="/adm">Administração</a></li>
+        <li><a href="/adm-artigos">Artigos</a></li>
+        <li><a href="/adm-criar-artigo">Criar Artigo</a></li>
+                </ul>
+
+                <mat-card>
+
+                    <mat-card-title>Novo Artigo</mat-card-title>
+
+    <form>
+        <mat-form-field>
+            <input [formControl] = "titulo"
+            required
+            [(ngModel)] = "artigo.titulo"
+            name="titulo"
+            matInput
+            placeholder="Titulo">
+        </mat-form-field>
+
+        <mat-form-field>
+            <textarea
+            [formControl] = "texto"
+            required
+            matInput placeholder="Texto do artigo"
+            [(ngModel)] ="artigo.texto" name="texto" ></textarea>
+        </mat-form-field>
+
+        <mat-form-field>
+            <input
+            [formControl] = "autor"
+            required
+            matInput placeholder="Autor do artigo"
+            [(ngModel)] ="artigo.autor" name="autor" >
+        </mat-form-field>
+<!--
+        <mat-form-field>
+            <input matInput placeholder="Data de publicação do artigo"
+            [(ngModel)] ="artigo.data" name="data" disabled>
+        </mat-form-field> -->
+
+    </form>
+
+
+    <button [disabled]="!validaCampos()" mat-raised-button (click) = "criarArtigo()" color = "primary">
+        Salvar
+    </button>
+
+    <button mat-raised-button (click) = "cancelar()" color = "accent">
+        Cancelar
+    </button>
+
+</mat-card>
+</div>

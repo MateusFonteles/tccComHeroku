@@ -1,0 +1,44 @@
+<section fxLayout="column" fxFlexAlign="center" class="conteudo"> 
+    <ul class="breadcrumb">
+        <li><a href="/home">Início</a></li>
+        <li><a href="/adm">Administração</a></li>
+    </ul>
+    
+    <div class="titulo" fxFlexAlign="center"> 
+        <h1> Painel de administração da plataforma </h1>
+        <h4>        Selecione o que deseja editar    </h4>
+       
+    </div>
+    
+    <img src="./assets/undraw_post_re_mtr4.svg" alt="Imagem de uma mulher com um envelope na mão." fxFlexAlign="center"> 
+        <mat-nav-list class="opcoes" fxFlexAlign="center">
+            
+            <a mat-list-item routerLink="/adm-usuarios"> 
+                <i class="material-icons">
+                    person
+                </i>
+                Usuários
+            </a>
+                <a mat-list-item routerLink="/adm-artigos"> 
+                    <i class="material-icons">
+                        post_add
+                    </i>
+                    Artigos
+                </a>
+                <a mat-list-item routerLink="/adm-atividades"> 
+                <i class="material-icons">
+                    library_add
+                </i>
+                Atividades
+            </a>
+            <a mat-list-item routerLink="/adm-categorias"> 
+                    <i class="material-icons">
+                        list_alt
+                    </i>
+                    Categorias
+                </a>
+                
+            </mat-nav-list>
+
+        
+        </section>

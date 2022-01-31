@@ -1,0 +1,19 @@
+
+<section fxLayout="column" fxFlexAlign="stretch" class="conteudo">
+    <ul class="breadcrumb">
+        <li><a href="/home">Início</a></li>
+        <li><a href="/adm">Administração</a></li>
+        <li><a href="/adm-categorias">Categorias</a></li>
+      </ul>
+      <h1>
+          Listagem das Categorias
+      </h1>
+    <button mat-raised-button (click) = "navigateToCriarCategoria()" color="primary">
+        Nova categoria
+    </button>
+     <app-categorias-visualizar></app-categorias-visualizar>  
+    <button mat-raised-button (click) = "navigateToPainel()" color="accent">
+        Voltar
+    </button>
+
+</section>

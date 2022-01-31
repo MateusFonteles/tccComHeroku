@@ -1,0 +1,19 @@
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+button {
+    margin: 20px 15px 0px 0px;
+}
+
+.mat-card-title{
+    margin-bottom: 25px;
+
+}
+
+.conteudo{
+    margin: auto;
+}
+
+textarea.mat-input-element {height:200px}

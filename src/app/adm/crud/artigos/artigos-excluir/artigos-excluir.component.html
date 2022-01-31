@@ -1,0 +1,42 @@
+<div *ngIf="artigo !== null">
+
+  <section fxLayout="column" fxFlexAlign="center" fxFlex="50%" fxFlex.xs="100%" fxFlex.sm="100%" class="conteudo">
+    <ul class="breadcrumb">
+      <li><a href="/home">Início</a></li>
+        <li><a href="/adm">Administração</a></li>
+        <li><a href="/adm-artigos">Artigos</a></li>
+        <li><a routerLink="/adm-excluir-artigo">Excluir {{artigo.titulo}}</a></li>
+    </ul>
+
+    <mat-card>
+        <mat-card-title>Excluir Artigo</mat-card-title>
+
+        <form>
+            <mat-form-field>
+              <input matInput placeholder="Título do artigo" [value]="artigo.titulo" name="titulo" disabled>
+            </mat-form-field>
+
+            <mat-form-field>
+                <textarea put matInput placeholder="Texto da artigo" [value]="artigo.texto" name="texto" disabled></textarea>
+            </mat-form-field>
+
+            <mat-form-field>
+                <input matInput placeholder="Autor do artigo" [value]="artigo.autor" name="texto" disabled>
+            </mat-form-field>
+
+            <!-- <mat-form-field>
+                <input matInput placeholder="Data de publicação do artigo" [value]="artigo.data" name="data" disabled>
+            </mat-form-field> -->
+        </form>
+
+
+        <button mat-raised-button (click)="excluirArtigo()" color="primary">
+            Excluir
+        </button>
+        <button mat-raised-button (click)="cancelar()" color="accent">
+            Cancelar
+        </button>
+    </mat-card>
+</section>
+
+            </div>

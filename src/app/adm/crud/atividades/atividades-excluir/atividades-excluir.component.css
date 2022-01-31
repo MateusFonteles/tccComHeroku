@@ -1,0 +1,16 @@
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+button{
+margin: 15px;
+}
+
+.conteudo{
+    margin: auto;
+}
+.mat-card-title{
+    margin-bottom: 25px;
+
+}

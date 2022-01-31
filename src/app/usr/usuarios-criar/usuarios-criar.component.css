@@ -1,0 +1,20 @@
+h1{
+    text-align: center;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+button{
+    width: 40%;
+    margin: auto;
+    margin-top: 15px;
+    margin-bottom:15px ;
+}
+
+.conteudo {
+    margin: auto;
+    text-align: center;
+}

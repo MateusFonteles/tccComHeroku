@@ -1,0 +1,30 @@
+<div class="conteudo">
+
+
+    <ul class="breadcrumb">
+        <li><a href="/home">Início</a></li>
+        <li><a href="/artigos">Artigos</a></li>
+        <li><a routerLink="/artigo">{{artigo.titulo}}</a></li>
+    </ul>
+
+
+          <mat-card  class="mat-elevation-z4">
+            <mat-card-header><h1>
+              <mat-card-title>
+                {{artigo.titulo}}
+              </mat-card-title></h1>
+            </mat-card-header>
+             <mat-card-content>
+               <mat-card-subtitle>Resumo: <br></mat-card-subtitle>
+               <p>Artigo:</p>
+               <p>{{artigo.texto}}</p>
+               <!-- <mat-card-subtitle>Data de postagem: {{artigo.data}}</mat-card-subtitle><br> -->
+               <mat-card-subtitle>Autora: {{artigo.autor}}</mat-card-subtitle><br>
+
+             </mat-card-content>
+             <mat-card-actions>
+               <button mat-button routerLink="/artigos" color="primary">Voltar</button>
+             </mat-card-actions>
+          </mat-card>
+</div>
+

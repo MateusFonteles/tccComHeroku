@@ -1,0 +1,40 @@
+<mat-toolbar color="primary">
+    <div fxHide.gt-xs>
+        <button mat-icon-button (click)="onToggleSidenav()">
+            <mat-icon>menu</mat-icon>
+        </button>
+    </div>
+
+      <img class="logo" src="./assets/logoOnu.png" alt="Logomarca da ONU representando a causa da inclusão das pessoas com deficiência.">
+
+    <div class="titulo">
+        <a routerLink="/home">
+           Spaço Educar</a>
+        </div>
+    <div fxFlex fxLayout fxLayoutAlign="end" fxHide.xs class="navegacao">
+        <ul fxLayout fxLayoutGap="15px" class="navigation-items">
+            <li>
+                <a routerLink="/home">
+                    Início</a>
+            </li>
+        
+            <li>
+                <a routerLink="/atividades">
+                    Atividades</a>
+            </li>
+            <li>
+                <a routerLink="/artigos">Artigos</a>
+            </li>
+            <li>
+                <a routerLink="/sobre">Sobre</a>
+            </li>
+            <li>
+                <a routerLink="/contato">Contato</a>
+            </li>
+            <li>
+                <a routerLink="/contribua">Contribua!</a>
+            </li>
+        </ul>
+    </div>
+        <a class="login material-icons" routerLink="/usuario-login">account_circle</a>
+  </mat-toolbar>

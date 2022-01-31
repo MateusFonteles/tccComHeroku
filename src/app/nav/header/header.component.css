@@ -1,0 +1,57 @@
+a {
+    font-size:medium;
+    text-decoration: none;
+    color: white;
+    vertical-align: middle;
+}
+ 
+a:hover, a:active{
+    color: lightgray;
+}
+ 
+.navigation-items{
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+ 
+mat-toolbar{
+    border-radius: 3px;
+}
+ 
+@media(max-width: 959px){
+    mat-toolbar{
+        border-radius: 0px;
+    }
+}
+
+.login {
+    margin: 30px;
+    font-size:30px;
+    vertical-align: middle;
+}
+
+
+.material-icons{
+    vertical-align:middle;
+}
+
+.logo{
+    max-height: 35px;
+    margin-right: 10px;
+    vertical-align: middle;
+}
+
+.mat-button{
+    font-size: 12pt;
+    
+}
+
+.titulo {
+    margin-right: 15px;
+}
+
+mat-button-focus-overlay{
+    color: aqua;
+    background-color: red;
+}

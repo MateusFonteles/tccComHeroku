@@ -1,0 +1,14 @@
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+button {
+    margin: 15px;
+    
+}
+.conteudo{
+    margin: auto;
+}
+
+textarea.mat-input-element {height:200px}

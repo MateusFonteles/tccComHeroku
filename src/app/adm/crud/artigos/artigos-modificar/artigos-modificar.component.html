@@ -1,0 +1,53 @@
+
+  <div *ngIf="artigo !== null">
+
+    <section fxLayout="column" fxFlexAlign="center"  fxFlex="50%" fxFlex.xs="100%" fxFlex.sm="100%" class="conteudo">
+      <ul class="breadcrumb">
+        <li><a href="/home">Início</a></li>
+        <li><a href="/adm-home">Administração</a></li>
+        <li><a href="/adm-artigos">Artigos</a></li>
+        <li><a routerLink="/modificar-artigo">Modificar</a></li>
+      </ul>
+
+<mat-card>
+  <mat-card-title>Alterar Artigo</mat-card-title>
+
+  <form>
+  <mat-form-field>
+    <input matInput placeholder="Título do artigo"
+    [(ngModel)] ="artigo.titulo" name="titulo" >
+      </mat-form-field>
+
+      <mat-form-field>
+        <input matInput placeholder="Descrição do artigo"
+          [(ngModel)] ="artigo.texto" name="texto" >
+        </mat-form-field>
+
+      <mat-form-field>
+        <input matInput placeholder="Texto do artigo"
+          [(ngModel)] ="artigo.texto" name="texto" >
+        </mat-form-field>
+
+        <mat-form-field>
+          <input matInput placeholder="Autor do artigo"
+          [(ngModel)] ="artigo.autor" name="autor" >
+        </mat-form-field>
+      <!--
+        <mat-form-field>
+          <input matInput placeholder="Data de publicação do artigo"
+          [(ngModel)] ="artigo.data" name="data" disabled>
+        </mat-form-field> -->
+
+      </form>
+
+
+<button mat-raised-button (click) = "modificarArtigo()" color="primary">
+  Modificar
+</button>
+<button mat-raised-button (click) = "cancel()" color="accent">
+Cancelar
+</button>
+</mat-card>
+</section>
+
+</div>

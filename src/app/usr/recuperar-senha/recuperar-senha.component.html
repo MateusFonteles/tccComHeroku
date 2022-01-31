@@ -1,0 +1,30 @@
+<section fxFlex="50%" fxFlex.xs="100%" fxFlex.sm="100%" class="conteudo">
+
+
+    <ul class="breadcrumb">
+          <li><a href="/home">Início</a></li>
+          <li><a href="/usuario-recuperar-senha">Recuperar senha</a></li>
+
+        </ul>
+
+
+        <h1>Recuperação de Senha</h1>
+
+        <form>
+
+          <mat-form-field>
+            <input  [formControl] = "email"
+            required
+            [(ngModel)] = "recuperarsenha.email"
+            name="email"
+            type="email"
+            matInput
+            placeholder="Informe seu e-mail de cadastro">
+        </mat-form-field>
+        <button [disabled]="!validaCampos()" (click)="recuperar()"  mat-raised-button color="primary">Recuperar Senha</button>
+      </form>
+
+
+
+    </section>
+

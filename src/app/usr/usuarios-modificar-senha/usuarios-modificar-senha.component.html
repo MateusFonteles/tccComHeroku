@@ -1,0 +1,41 @@
+<section fxLayout="column" fxFlexAlign="center"  fxFlex="50%" fxFlex.xs="100%" fxFlex.sm="100%" class="conteudo"> 
+
+  
+    <ul class="breadcrumb">
+          <li><a href="/home">Início</a></li>
+          <li><a routerLink="/perfil">Perfil</a></li>
+          <li><a routerLink="/modificar-usuario">Modificar usuario</a></li>
+        </ul>
+
+<mat-card>
+
+    <mat-card-title>Modificar senha</mat-card-title>
+
+    <form>
+        <mat-form-field>
+            <input matInput placeholder="Sua senha atual"
+                [(ngModel)] ="usuario.senha" name="senha"> 
+        </mat-form-field>
+
+        <mat-form-field>
+            <input matInput placeholder="Sua nova senha"
+           >
+        </mat-form-field>
+
+        <mat-form-field>
+            <input matInput placeholder="Confirmar nova senha"
+            >
+        </mat-form-field>
+        
+    </form>
+
+<button mat-raised-button (click) = "modificarSenha()" color = "primary">
+Modificar
+</button>
+
+<a mat-raised-button routerLink="/usuario/{{this.usuario.senha}}" color = "accent">
+Cancelar
+</a>
+
+</mat-card>
+</section>
